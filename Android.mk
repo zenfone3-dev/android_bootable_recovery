@@ -238,9 +238,7 @@ endif
 ifneq ($(RECOVERY_SDCARD_ON_DATA),)
 	LOCAL_CFLAGS += -DRECOVERY_SDCARD_ON_DATA
 endif
-ifneq ($(TW_INCLUDE_DUMLOCK),)
-	LOCAL_CFLAGS += -DTW_INCLUDE_DUMLOCK
-endif
+
 ifneq ($(TW_INTERNAL_STORAGE_PATH),)
 	LOCAL_CFLAGS += -DTW_INTERNAL_STORAGE_PATH=$(TW_INTERNAL_STORAGE_PATH)
 endif
@@ -459,11 +457,7 @@ endif
 ifneq ($(TW_EXCLUDE_ENCRYPTED_BACKUPS), true)
     TWRP_REQUIRED_MODULES += openaes openaes_license
 endif
-ifeq ($(TW_INCLUDE_DUMLOCK), true)
-    TWRP_REQUIRED_MODULES += \
-        htcdumlock htcdumlocksys flash_imagesys dump_imagesys libbmlutils.so \
-        libflashutils.so libmmcutils.so libmtdutils.so HTCDumlock.apk
-endif
+
 ifeq ($(TW_INCLUDE_FB2PNG), true)
     TWRP_REQUIRED_MODULES += fb2png
 endif
@@ -833,7 +827,6 @@ endif
 #$(commands_TWRP_local_path)/otautil/Android.mk
 #includes for TWRP
 include $(commands_TWRP_local_path)/injecttwrp/Android.mk \
-    $(commands_TWRP_local_path)/htcdumlock/Android.mk \
     $(commands_TWRP_local_path)/gui/Android.mk \
     $(commands_TWRP_local_path)/mmcutils/Android.mk \
     $(commands_TWRP_local_path)/bmlutils/Android.mk \
