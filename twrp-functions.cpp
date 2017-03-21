@@ -900,7 +900,6 @@ string TWFunc::System_Property_Get(string Prop_Name) {
 	if (!TWFunc::Path_Exists(prop_file))
 		prop_file = PartitionManager.Get_Android_Root_Path() + "/system/build.prop"; // for devices with system as a root file system (e.g. Pixel)
 	if (TWFunc::read_file(prop_file, buildprop) != 0) {
-		LOGINFO("Unable to open build.prop for getting '%s'.\n", Prop_Name.c_str());
 		DataManager::SetValue(TW_BACKUP_NAME, Get_Current_Date());
 		if (!mount_state)
 			PartitionManager.UnMount_By_Path(PartitionManager.Get_Android_Root_Path(), false);
