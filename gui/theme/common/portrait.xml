@@ -3496,6 +3496,19 @@
 			</button>
 
 			<button style="main_button">
+				<placement x="%center_x%" y="%row19_y%"/>
+				<text>{@treble_enabler_btn=Treble Enabler}</text>
+				<actions>
+					<action function="stopmtp"/>
+					<action function="set">tw_back=advanced</action>
+					<action function="queueclear"/>
+					<action function="set">tw_filename=/zenfone_manager/party_zf3.zip</action>
+					<action function="queuezip"/>
+					<action function="flash">flash_zip</action>
+				</actions>
+			</button>
+
+			<button style="main_button">
 				<condition var1="tw_show_dumlock" var2="1"/>
 				<placement x="%center_x%" y="%row19_y%"/>
 				<text>{@dumlock_btn=HTC Dumlock}</text>

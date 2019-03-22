@@ -70,6 +70,7 @@
 		<string name="file_selector_folders_hdr">Folders</string>
 		<string name="select_file_from_storage">Select File from %tw_storage_display_name% (%tw_storage_free_size% MB)</string>
 		<string name="adb_sideload_btn">ADB Sideload</string>
+		<string name="treble_enabler_btn">Treble Enabler</string>
 		<string name="install_hdr">Install</string>
 		<string name="select_storage_hdr">Select Storage</string>
 		<string name="select_storage_btn">Select Storage</string>
